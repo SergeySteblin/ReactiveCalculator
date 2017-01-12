@@ -1,0 +1,8 @@
+<resources>
+    <!-- Nexus 5x, Nexus 6 -->
+    <dimen name="numeric_edit_width">80dp</dimen>
+    <dimen name="image_size">30dp</dimen>
+    <dimen name="app_description_textSize">24sp</dimen>
+    <integer name="num_input_digits">6</integer>
+    <integer name="num_output_digits">13</integer>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <!-- 5.4 FWVGA -->
+    <dimen name="numeric_edit_width">100dp</dimen>
+    <dimen name="image_size">30dp</dimen>
+    <dimen name="app_description_textSize">28sp</dimen>
+    <integer name="num_input_digits">8</integer>
+    <integer name="num_output_digits">17</integer>
+</resources>

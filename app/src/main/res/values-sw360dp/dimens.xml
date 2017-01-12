@@ -1,0 +1,8 @@
+<resources>
+    <!-- LG-H815 -->
+    <dimen name="numeric_edit_width">70dp</dimen>
+    <dimen name="image_size">30dp</dimen>
+    <dimen name="app_description_textSize">22sp</dimen>
+    <integer name="num_input_digits">5</integer>
+    <integer name="num_output_digits">11</integer>
+</resources>

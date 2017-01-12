@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/operation"
+    android:layout_height="@dimen/operation_height"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/operation_vertical_margin"
+    android:layout_marginBottom="@dimen/operation_vertical_margin"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_main">
+
+    <include
+        android:id="@+id/number1"
+        layout="@layout/numeric_edit_text"/>
+
+    <ImageView
+        android:id="@+id/imgOperation"
+        android:layout_height="@dimen/image_size"
+        android:layout_width="@dimen/image_size"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/image_horizontal_margin"
+        android:layout_marginEnd="@dimen/image_horizontal_margin"/>
+
+    <include
+        android:id="@+id/number2"
+        layout="@layout/numeric_edit_text"/>
+
+    <ImageView
+        android:id="@+id/imgEqual"
+        android:layout_height="@dimen/image_size"
+        android:layout_width="@dimen/image_size"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/image_horizontal_margin"
+        android:layout_marginEnd="@dimen/image_horizontal_margin"
+        android:src="@mipmap/ic_equal_black"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:text=""
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_gravity="end"
+        android:background="@drawable/rect_box"
+        android:gravity="center"
+        android:textSize="@dimen/numeric_textSize"
+        android:textStyle="bold"
+        android:maxLength="@integer/num_output_digits"/>
+</LinearLayout>

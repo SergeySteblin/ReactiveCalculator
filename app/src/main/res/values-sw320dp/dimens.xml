@@ -1,0 +1,8 @@
+<resources>
+    <!-- 3.3 WQVGA, Nexus S -->
+    <dimen name="numeric_edit_width">60dp</dimen>
+    <dimen name="image_size">25dp</dimen>
+    <dimen name="app_description_textSize">20sp</dimen>
+    <integer name="num_input_digits">4</integer>
+    <integer name="num_output_digits">9</integer>
+</resources>

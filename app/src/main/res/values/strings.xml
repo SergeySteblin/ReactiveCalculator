@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ReactiveCalculator</string>
+    <string name="app_label">Reactive calculator</string>
+    <string name="app_description">Add numbers to calculate.</string>
+    <string name="number">number</string>
+    <string name="result_error">Error</string>
+    <string name="error_division_by_zero">Cannot divide by zero</string>
+</resources>
