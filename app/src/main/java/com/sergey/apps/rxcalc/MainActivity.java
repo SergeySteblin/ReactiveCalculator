@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
     @Inject
     FragmentFactory mFragmentFactory;
 
-    private Fragment addFragment;
-    private Fragment subFragment;
-    private Fragment mulFragment;
-    private Fragment divFragment;
+    private Fragment mAddFragment;
+    private Fragment mSubFragment;
+    private Fragment mMulFragment;
+    private Fragment mDivFragment;
 
     public MainActivity() {
     }
@@ -37,22 +37,22 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getFragmentManager();
         if(savedInstanceState == null) {
-            addFragment = mFragmentFactory.createAddFragment();
-            subFragment = mFragmentFactory.createSubFragment();
-            mulFragment = mFragmentFactory.createMulFragment();
-            divFragment = mFragmentFactory.createDivFragment();
+            mAddFragment = mFragmentFactory.createAddFragment();
+            mSubFragment = mFragmentFactory.createSubFragment();
+            mMulFragment = mFragmentFactory.createMulFragment();
+            mDivFragment = mFragmentFactory.createDivFragment();
 
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-            fragmentTransaction.add(R.id.add_fragment_container, addFragment, ADD_FRAGMENT);
-            fragmentTransaction.add(R.id.sub_fragment_container, subFragment, SUB_FRAGMENT);
-            fragmentTransaction.add(R.id.mul_fragment_container, mulFragment, MUL_FRAGMENT);
-            fragmentTransaction.add(R.id.div_fragment_container, divFragment, DIV_FRAGMENT);
+            fragmentTransaction.add(R.id.add_fragment_container, mAddFragment, ADD_FRAGMENT);
+            fragmentTransaction.add(R.id.sub_fragment_container, mSubFragment, SUB_FRAGMENT);
+            fragmentTransaction.add(R.id.mul_fragment_container, mMulFragment, MUL_FRAGMENT);
+            fragmentTransaction.add(R.id.div_fragment_container, mDivFragment, DIV_FRAGMENT);
             fragmentTransaction.commit();
         } else {
-            addFragment = fragmentManager.getFragment(savedInstanceState, ADD_FRAGMENT);
-            subFragment = fragmentManager.getFragment(savedInstanceState, SUB_FRAGMENT);
-            mulFragment = fragmentManager.getFragment(savedInstanceState, MUL_FRAGMENT);
-            divFragment = fragmentManager.getFragment(savedInstanceState, DIV_FRAGMENT);
+            mAddFragment = fragmentManager.getFragment(savedInstanceState, ADD_FRAGMENT);
+            mSubFragment = fragmentManager.getFragment(savedInstanceState, SUB_FRAGMENT);
+            mMulFragment = fragmentManager.getFragment(savedInstanceState, MUL_FRAGMENT);
+            mDivFragment = fragmentManager.getFragment(savedInstanceState, DIV_FRAGMENT);
         }
     }
 
@@ -61,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         //Save the fragment's instance
         FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.putFragment(outState, ADD_FRAGMENT, addFragment);
-        fragmentManager.putFragment(outState, SUB_FRAGMENT, subFragment);
-        fragmentManager.putFragment(outState, MUL_FRAGMENT, mulFragment);
-        fragmentManager.putFragment(outState, DIV_FRAGMENT, divFragment);
+        fragmentManager.putFragment(outState, ADD_FRAGMENT, mAddFragment);
+        fragmentManager.putFragment(outState, SUB_FRAGMENT, mSubFragment);
+        fragmentManager.putFragment(outState, MUL_FRAGMENT, mMulFragment);
+        fragmentManager.putFragment(outState, DIV_FRAGMENT, mDivFragment);
     }
 }
